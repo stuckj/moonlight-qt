@@ -201,6 +201,16 @@ CenteredGridView {
                     }
                 }
                 NavigableMenuItem {
+                    text: qsTr("Configure Wake")
+                    onTriggered: {
+                        configureWakeDialog.pcIndex = index
+                        configureWakeDialog.pcName = model.name
+                        configureWakeDialog.wakeMethod = computerModel.getWakeMethod(index)
+                        configureWakeDialog.httpWakeUrl = computerModel.getHttpWakeUrl(index)
+                        configureWakeDialog.open()
+                    }
+                }
+                NavigableMenuItem {
                     text: qsTr("Delete PC")
                     onTriggered: {
                         deletePcDialog.pcIndex = index
@@ -401,6 +411,83 @@ CenteredGridView {
         text: showPcDetailsDialog.pcDetails
         imageSrc: "qrc:/res/baseline-help_outline-24px.svg"
         standardButtons: Dialog.Ok
+    }
+
+    NavigableDialog {
+        id: configureWakeDialog
+        property int pcIndex: -1
+        property string pcName: ""
+        property int wakeMethod: 0
+        property string httpWakeUrl: ""
+
+        title: qsTr("Configure Wake: %1").arg(pcName)
+        standardButtons: Dialog.Ok | Dialog.Cancel
+
+        onOpened: {
+            wolRadio.forceActiveFocus()
+            wolRadio.checked = (wakeMethod === 0)
+            httpRadio.checked = (wakeMethod === 1)
+            httpWakeUrlField.text = httpWakeUrl
+        }
+
+        onClosed: {
+            httpWakeUrlField.clear()
+        }
+
+        onAccepted: {
+            var method = wolRadio.checked ? 0 : 1
+            computerModel.configureWake(pcIndex, method, httpWakeUrlField.text.trim())
+        }
+
+        ColumnLayout {
+            spacing: 10
+
+            Label {
+                text: qsTr("Wake Method:")
+                font.bold: true
+            }
+
+            RadioButton {
+                id: wolRadio
+                text: qsTr("Standard Wake-on-LAN (magic packet)")
+                ButtonGroup.group: wakeMethodGroup
+            }
+
+            RadioButton {
+                id: httpRadio
+                text: qsTr("HTTP Wake (for VPN/Tailscale)")
+                ButtonGroup.group: wakeMethodGroup
+            }
+
+            ButtonGroup {
+                id: wakeMethodGroup
+            }
+
+            Label {
+                text: qsTr("HTTP Wake URL:")
+                font.bold: true
+                visible: httpRadio.checked
+            }
+
+            TextField {
+                id: httpWakeUrlField
+                Layout.fillWidth: true
+                Layout.minimumWidth: 400
+                placeholderText: "https://wakeonlan.example.com/wake/aa:bb:cc:dd:ee:ff"
+                visible: httpRadio.checked
+
+                Keys.onReturnPressed: configureWakeDialog.accept()
+                Keys.onEnterPressed: configureWakeDialog.accept()
+            }
+
+            Label {
+                text: qsTr("A simple HTTP GET request will be sent to this URL.")
+                font.pointSize: 9
+                font.italic: true
+                visible: httpRadio.checked
+                Layout.topMargin: 5
+            }
+        }
     }
 
     ScrollBar.vertical: ScrollBar {}
