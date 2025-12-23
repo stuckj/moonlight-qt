@@ -108,91 +108,91 @@
 <context>
     <name>ComputerModel</name>
     <message>
-        <location filename="../gui/computermodel.cpp" line="55"/>
+        <location filename="../gui/computermodel.cpp" line="50"/>
         <source>Online</source>
         <translation>En línea</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="58"/>
+        <location filename="../gui/computermodel.cpp" line="53"/>
         <source>Offline</source>
         <translation>Sin conexión</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="61"/>
-        <location filename="../gui/computermodel.cpp" line="73"/>
-        <location filename="../gui/computermodel.cpp" line="85"/>
-        <location filename="../gui/computermodel.cpp" line="87"/>
-        <location filename="../gui/computermodel.cpp" line="88"/>
+        <location filename="../gui/computermodel.cpp" line="56"/>
+        <location filename="../gui/computermodel.cpp" line="68"/>
+        <location filename="../gui/computermodel.cpp" line="80"/>
+        <location filename="../gui/computermodel.cpp" line="82"/>
+        <location filename="../gui/computermodel.cpp" line="83"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="67"/>
+        <location filename="../gui/computermodel.cpp" line="62"/>
         <source>Paired</source>
         <translation>Emparejado</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="70"/>
+        <location filename="../gui/computermodel.cpp" line="65"/>
         <source>Unpaired</source>
         <translation>No emparejado</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="77"/>
+        <location filename="../gui/computermodel.cpp" line="72"/>
         <source>Name: %1</source>
         <translation>Nombre: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="78"/>
+        <location filename="../gui/computermodel.cpp" line="73"/>
         <source>Status: %1</source>
         <translation>Estado: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="79"/>
+        <location filename="../gui/computermodel.cpp" line="74"/>
         <source>Active Address: %1</source>
         <translation>Dirección activa: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="80"/>
+        <location filename="../gui/computermodel.cpp" line="75"/>
         <source>UUID: %1</source>
         <translation>UUID: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="81"/>
+        <location filename="../gui/computermodel.cpp" line="76"/>
         <source>Local Address: %1</source>
         <translation>Dirección local: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="82"/>
+        <location filename="../gui/computermodel.cpp" line="77"/>
         <source>Remote Address: %1</source>
         <translation>Dirección remota: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="83"/>
+        <location filename="../gui/computermodel.cpp" line="78"/>
         <source>IPv6 Address: %1</source>
         <translation>Dirección ipv6: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="84"/>
+        <location filename="../gui/computermodel.cpp" line="79"/>
         <source>Manual Address: %1</source>
         <translation>Dirección manual: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="85"/>
+        <location filename="../gui/computermodel.cpp" line="80"/>
         <source>MAC Address: %1</source>
         <translation>Dirección mac: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="86"/>
+        <location filename="../gui/computermodel.cpp" line="81"/>
         <source>Pair State: %1</source>
         <translation>Estado del par: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="87"/>
+        <location filename="../gui/computermodel.cpp" line="82"/>
         <source>Running Game ID: %1</source>
         <translation>ID del juego: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="88"/>
+        <location filename="../gui/computermodel.cpp" line="83"/>
         <source>HTTPS Port: %1</source>
         <translation>Puerto HTTPS: %1</translation>
     </message>
@@ -262,86 +262,46 @@
     </message>
     <message>
         <location filename="../gui/PcView.qml" line="204"/>
-        <source>Configure Wake</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="214"/>
         <source>Delete PC</source>
         <translation>Eliminar PC</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="222"/>
+        <location filename="../gui/PcView.qml" line="212"/>
         <source>View Details</source>
         <translation>Ver los detalles</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="234"/>
+        <location filename="../gui/PcView.qml" line="224"/>
         <source>The version of GeForce Experience on %1 is not supported by this build of Moonlight. You must update Moonlight to stream from %1.</source>
         <translation>La versión de GeForce Experience en %1 no es compatible con esta versión de Moonlight. Debes actualizar Moonlight para transmitir desde %1.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="337"/>
+        <location filename="../gui/PcView.qml" line="327"/>
         <source>This may take a few seconds…</source>
         <translation>Esto puede llevar unos segundos…</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="348"/>
+        <location filename="../gui/PcView.qml" line="338"/>
         <source>This network does not appear to be blocking Moonlight. If you still have trouble connecting, check your PC&apos;s firewall settings.</source>
         <translation>Esta red no parece estar bloqueando Moonlight. Si sigue teniendo problemas para conectarse, compruebe la configuración del cortafuegos de su PC.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="348"/>
+        <location filename="../gui/PcView.qml" line="338"/>
         <source>If you are trying to stream over the Internet, install the Moonlight Internet Hosting Tool on your gaming PC and run the included Internet Streaming Tester to check your gaming PC&apos;s Internet connection.</source>
         <translation>Si estás intentando hacer streaming a través de Internet, instala la herramienta Moonlight Internet Hosting Tool en tu PC de juegos y ejecuta el comprobador de streaming por Internet incluido para comprobar la conexión a Internet de tu PC de juegos.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="352"/>
+        <location filename="../gui/PcView.qml" line="342"/>
         <source>Your PC&apos;s current network connection seems to be blocking Moonlight. Streaming over the Internet may not work while connected to this network.</source>
         <translation>La conexión de red actual de tu PC parece estar bloqueando Moonlight. Es posible que la transmisión por Internet no funcione mientras esté conectado a esta red.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="352"/>
+        <location filename="../gui/PcView.qml" line="342"/>
         <source>The following network ports were blocked:</source>
         <translation>Los siguientes puertos de red fueron bloqueados:</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="424"/>
-        <source>Configure Wake: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="452"/>
-        <source>Wake Method:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="458"/>
-        <source>Standard Wake-on-LAN (magic packet)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="464"/>
-        <source>HTTP Wake (for VPN/Tailscale)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="473"/>
-        <source>HTTP Wake URL:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="498"/>
-        <source>Invalid URL. Please enter a valid HTTP or HTTPS URL.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="505"/>
-        <source>A simple HTTP GET request will be sent to this URL.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gui/PcView.qml" line="344"/>
+        <location filename="../gui/PcView.qml" line="334"/>
         <source>The network test could not be performed because none of Moonlight&apos;s connection testing servers were reachable from this PC. Check your Internet connection or try again later.</source>
         <translation>La prueba de red no pudo realizarse porque ninguno de los servidores de prueba de conexión de Moonlight era accesible desde este PC. Compruebe su conexión a Internet o inténtelo de nuevo más tarde.</translation>
     </message>
@@ -366,27 +326,27 @@
         <translation>Ver todas las aplicaciones</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="310"/>
+        <location filename="../gui/PcView.qml" line="300"/>
         <source>Please enter %1 on your host PC. This dialog will close when pairing is completed.</source>
         <translation>Por favor, introduzca %1 en el host de tu PC. Este cuadro de diálogo se cerrará cuando finalice el emparejamiento.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="311"/>
+        <location filename="../gui/PcView.qml" line="301"/>
         <source>If your host PC is running Sunshine, navigate to the Sunshine web UI to enter the PIN.</source>
         <translation>Si el host del PC está ejecutando Sunshine, navegue hasta la interfaz de usuario web de Sunshine para introducir el PIN.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="323"/>
+        <location filename="../gui/PcView.qml" line="313"/>
         <source>Are you sure you want to remove &apos;%1&apos;?</source>
         <translation>¿Estás seguro de que quieres eliminar &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="337"/>
+        <location filename="../gui/PcView.qml" line="327"/>
         <source>Moonlight is testing your network connection to determine if any required ports are blocked.</source>
         <translation>Moonlight está probando tu conexión de red para determinar si algún puerto necesario está bloqueado.</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="364"/>
+        <location filename="../gui/PcView.qml" line="354"/>
         <source>Enter the new name for this PC:</source>
         <translation>Introduzca el nombre nuevo para este PC:</translation>
     </message>
@@ -467,27 +427,27 @@
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../main.cpp" line="764"/>
+        <location filename="../main.cpp" line="674"/>
         <source>&amp;Yes</source>
         <translation>&amp;Sí</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="765"/>
+        <location filename="../main.cpp" line="675"/>
         <source>&amp;No</source>
         <translation>&amp;No</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="766"/>
+        <location filename="../main.cpp" line="676"/>
         <source>OK</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="767"/>
+        <location filename="../main.cpp" line="677"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="768"/>
+        <location filename="../main.cpp" line="678"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -617,7 +577,7 @@
         <translation>Las resoluciones de video superiores a 4K no son compatibles con el códec H.264.</translation>
     </message>
     <message>
-        <location filename="../streaming/session.cpp" line="1597"/>
+        <location filename="../streaming/session.cpp" line="1601"/>
         <source>Host returned error: %1</source>
         <translation>El host devuelve el error: %1</translation>
     </message>
@@ -703,7 +663,7 @@
         <translation>La selección del códec y la configuración de la decodificación forzada por hardware no son compatibles. La GPU de este PC no es compatible con la descodificación del códec elegido.</translation>
     </message>
     <message>
-        <location filename="../streaming/session.cpp" line="2221"/>
+        <location filename="../streaming/session.cpp" line="2207"/>
         <source>Unable to initialize video decoder. Please check your streaming settings and try again.</source>
         <translation>No se ha podido inicializar el decodificador de vídeo. Por favor, compruebe la configuración de la transmisión y vuelva a intentarlo.</translation>
     </message>
