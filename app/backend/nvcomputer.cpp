@@ -235,11 +235,19 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
 {
     QUrl qurl(url);
     if (!qurl.isValid()) {
-        qWarning() << computerName << "has invalid HTTP wake URL:" << url;
+        qWarning() << computerName << "has invalid HTTP wake URL";
         return false;
     }
 
-    qInfo() << "Sending HTTP wake request for" << computerName << "to" << url;
+    // Log URL without query params or credentials to avoid exposing sensitive data
+    QUrl redactedUrl = qurl;
+    if (redactedUrl.hasQuery()) {
+        redactedUrl.setQuery("***");
+    }
+    if (!redactedUrl.userInfo().isEmpty()) {
+        redactedUrl.setUserInfo("***");
+    }
+    qInfo() << "Sending HTTP wake request for" << computerName << "to" << redactedUrl.toString();
 
     QNetworkAccessManager nam;
     nam.setProxy(QNetworkProxy::NoProxy);
@@ -276,8 +284,7 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
         }
     }
 
-    reply->deleteLater();
-    QCoreApplication::processEvents();
+    delete reply;
     return success;
 }
 

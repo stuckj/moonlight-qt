@@ -11,9 +11,9 @@ ComputerSeeker::ComputerSeeker(ComputerManager *manager, QString computerName, Q
     // Run on thread pool since HTTP wake may block for up to 10 seconds.
     for (NvComputer * computer: m_ComputerManager->getComputers()) {
         if (this->matchComputer(computer)) {
-            QThreadPool::globalInstance()->start([computer]() {
+            QThreadPool::globalInstance()->start(QRunnable::create([computer]() {
                 computer->wake();
-            });
+            }));
         }
     }
 
