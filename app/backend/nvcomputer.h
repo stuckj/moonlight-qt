@@ -128,6 +128,5 @@ public:
 
 private:
     uint16_t externalPort;
-
     bool performHttpWake(const QString& url, const QString& computerName) const;
 };

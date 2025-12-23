@@ -225,7 +225,6 @@ bool ComputerModel::isValidWakeUrl(QString url)
            !qurl.host().isEmpty();
 }
 
-
 QString ComputerModel::generatePinString()
 {
     return m_ComputerManager->generatePinString();
