@@ -419,6 +419,7 @@ CenteredGridView {
         property string pcName: ""
         property int wakeMethod: 0
         property string httpWakeUrl: ""
+        property bool urlValid: wolRadio.checked || computerModel.isValidWakeUrl(httpWakeUrlField.text.trim())
 
         title: qsTr("Configure Wake: %1").arg(pcName)
         standardButtons: Dialog.Ok | Dialog.Cancel
@@ -437,6 +438,11 @@ CenteredGridView {
         onAccepted: {
             var method = wolRadio.checked ? 0 : 1
             computerModel.configureWake(pcIndex, method, httpWakeUrlField.text.trim())
+        }
+
+        // Disable OK button when HTTP wake is selected but URL is invalid
+        onUrlValidChanged: {
+            standardButton(Dialog.Ok).enabled = urlValid
         }
 
         ColumnLayout {
@@ -476,8 +482,23 @@ CenteredGridView {
                 placeholderText: "https://wakeonlan.example.com/wake/aa:bb:cc:dd:ee:ff"
                 visible: httpRadio.checked
 
-                Keys.onReturnPressed: configureWakeDialog.accept()
-                Keys.onEnterPressed: configureWakeDialog.accept()
+                Keys.onReturnPressed: {
+                    if (configureWakeDialog.urlValid) {
+                        configureWakeDialog.accept()
+                    }
+                }
+                Keys.onEnterPressed: {
+                    if (configureWakeDialog.urlValid) {
+                        configureWakeDialog.accept()
+                    }
+                }
+            }
+
+            Label {
+                text: qsTr("Invalid URL. Please enter a valid HTTP or HTTPS URL.")
+                font.pointSize: 9
+                color: "red"
+                visible: httpRadio.checked && httpWakeUrlField.text.trim() !== "" && !computerModel.isValidWakeUrl(httpWakeUrlField.text.trim())
             }
 
             Label {

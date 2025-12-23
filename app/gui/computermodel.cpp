@@ -214,6 +214,15 @@ QString ComputerModel::getHttpWakeUrl(int computerIndex)
     return computer->httpWakeUrl;
 }
 
+bool ComputerModel::isValidWakeUrl(QString url)
+{
+    if (url.isEmpty()) {
+        return false;
+    }
+    QUrl qurl(url);
+    return qurl.isValid() && (qurl.scheme() == "http" || qurl.scheme() == "https");
+}
+
 
 QString ComputerModel::generatePinString()
 {

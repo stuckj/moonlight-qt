@@ -46,6 +46,7 @@ public:
     Q_INVOKABLE void configureWake(int computerIndex, int wakeMethod, QString httpWakeUrl);
     Q_INVOKABLE int getWakeMethod(int computerIndex);
     Q_INVOKABLE QString getHttpWakeUrl(int computerIndex);
+    Q_INVOKABLE bool isValidWakeUrl(QString url);
 
     Q_INVOKABLE Session* createSessionForCurrentGame(int computerIndex);
 

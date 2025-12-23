@@ -108,91 +108,91 @@
 <context>
     <name>ComputerModel</name>
     <message>
-        <location filename="../gui/computermodel.cpp" line="52"/>
+        <location filename="../gui/computermodel.cpp" line="55"/>
         <source>Online</source>
         <translation>Online</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="55"/>
+        <location filename="../gui/computermodel.cpp" line="58"/>
         <source>Offline</source>
         <translation>Offline</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="58"/>
-        <location filename="../gui/computermodel.cpp" line="70"/>
-        <location filename="../gui/computermodel.cpp" line="82"/>
-        <location filename="../gui/computermodel.cpp" line="84"/>
+        <location filename="../gui/computermodel.cpp" line="61"/>
+        <location filename="../gui/computermodel.cpp" line="73"/>
         <location filename="../gui/computermodel.cpp" line="85"/>
+        <location filename="../gui/computermodel.cpp" line="87"/>
+        <location filename="../gui/computermodel.cpp" line="88"/>
         <source>Unknown</source>
         <translation>Onbekend</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="64"/>
+        <location filename="../gui/computermodel.cpp" line="67"/>
         <source>Paired</source>
         <translation>Gekoppeld</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="67"/>
+        <location filename="../gui/computermodel.cpp" line="70"/>
         <source>Unpaired</source>
         <translation>Niet gekoppeld</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="74"/>
+        <location filename="../gui/computermodel.cpp" line="77"/>
         <source>Name: %1</source>
         <translation>Naam: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="75"/>
+        <location filename="../gui/computermodel.cpp" line="78"/>
         <source>Status: %1</source>
         <translation>Status: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="76"/>
+        <location filename="../gui/computermodel.cpp" line="79"/>
         <source>Active Address: %1</source>
         <translation>Actief adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="77"/>
+        <location filename="../gui/computermodel.cpp" line="80"/>
         <source>UUID: %1</source>
         <translation>UUID: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="78"/>
+        <location filename="../gui/computermodel.cpp" line="81"/>
         <source>Local Address: %1</source>
         <translation>Lokaal adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="79"/>
+        <location filename="../gui/computermodel.cpp" line="82"/>
         <source>Remote Address: %1</source>
         <translation>Extern adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="80"/>
+        <location filename="../gui/computermodel.cpp" line="83"/>
         <source>IPv6 Address: %1</source>
         <translation>IPv6-adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="81"/>
+        <location filename="../gui/computermodel.cpp" line="84"/>
         <source>Manual Address: %1</source>
         <translation>Handmatig adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="82"/>
+        <location filename="../gui/computermodel.cpp" line="85"/>
         <source>MAC Address: %1</source>
         <translation>MAC-adres: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="83"/>
+        <location filename="../gui/computermodel.cpp" line="86"/>
         <source>Pair State: %1</source>
         <translation>Koppelingsstatus: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="84"/>
+        <location filename="../gui/computermodel.cpp" line="87"/>
         <source>Running Game ID: %1</source>
         <translation>Id van draaiend spel: %1</translation>
     </message>
     <message>
-        <location filename="../gui/computermodel.cpp" line="85"/>
+        <location filename="../gui/computermodel.cpp" line="88"/>
         <source>HTTPS Port: %1</source>
         <translation>HTTPS-poort: %1</translation>
     </message>
@@ -306,32 +306,37 @@
         <translation>De volgende netwerk poorten zijn geblokkeerd:</translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="423"/>
+        <location filename="../gui/PcView.qml" line="424"/>
         <source>Configure Wake: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="446"/>
+        <location filename="../gui/PcView.qml" line="452"/>
         <source>Wake Method:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="452"/>
+        <location filename="../gui/PcView.qml" line="458"/>
         <source>Standard Wake-on-LAN (magic packet)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="458"/>
+        <location filename="../gui/PcView.qml" line="464"/>
         <source>HTTP Wake (for VPN/Tailscale)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="467"/>
+        <location filename="../gui/PcView.qml" line="473"/>
         <source>HTTP Wake URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PcView.qml" line="484"/>
+        <location filename="../gui/PcView.qml" line="498"/>
+        <source>Invalid URL. Please enter a valid HTTP or HTTPS URL.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gui/PcView.qml" line="505"/>
         <source>A simple HTTP GET request will be sent to this URL.</source>
         <translation type="unfinished"></translation>
     </message>
