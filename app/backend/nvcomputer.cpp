@@ -229,6 +229,8 @@ NvComputer::NvComputer(NvHTTP& http, QString serverInfo)
     this->httpWakeUrl = QString();
 }
 
+// NOTE: This method performs synchronous network I/O and may block for up to
+// 10 seconds. It should only be called from a worker thread, not the UI thread.
 bool NvComputer::performHttpWake(const QString& url, const QString& computerName) const
 {
     QUrl qurl(url);
@@ -257,6 +259,7 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
     QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
     timer.start(10000);
     loop.exec(QEventLoop::ExcludeUserInputEvents);
+    timer.stop();
 
     bool success = false;
     if (timedOut) {
@@ -269,7 +272,7 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
             qInfo() << "HTTP wake request succeeded for" << computerName << "(status" << status << ")";
             success = true;
         } else {
-            qWarning() << "HTTP wake request returned status" << status << "for" << computerName;
+            qWarning() << "HTTP wake request failed for" << computerName << "(status" << status << ")";
         }
     }
 

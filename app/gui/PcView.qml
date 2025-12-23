@@ -482,7 +482,7 @@ CenteredGridView {
                 id: httpWakeUrlField
                 Layout.fillWidth: true
                 Layout.minimumWidth: 400
-                placeholderText: "https://wakeonlan.example.com/wake/aa:bb:cc:dd:ee:ff"
+                placeholderText: "https://wakeonlan.your-tailnet.ts.net/wake?mac=aa:bb:cc:dd:ee:ff"
                 visible: httpRadio.checked
 
                 Keys.onReturnPressed: {
@@ -505,7 +505,7 @@ CenteredGridView {
             }
 
             Label {
-                text: qsTr("A simple HTTP GET request will be sent to this URL.")
+                text: qsTr("A simple HTTP GET request with a 10-second timeout will be sent to this URL.")
                 font.pointSize: 9
                 font.italic: true
                 visible: httpRadio.checked
