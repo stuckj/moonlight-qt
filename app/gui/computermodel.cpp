@@ -220,7 +220,9 @@ bool ComputerModel::isValidWakeUrl(QString url)
         return false;
     }
     QUrl qurl(url);
-    return qurl.isValid() && (qurl.scheme() == "http" || qurl.scheme() == "https");
+    return qurl.isValid() &&
+           (qurl.scheme() == "http" || qurl.scheme() == "https") &&
+           !qurl.host().isEmpty();
 }
 
 

@@ -11,6 +11,7 @@
 #include <QNetworkReply>
 #include <QEventLoop>
 #include <QTimer>
+#include <QCoreApplication>
 
 #define SER_NAME "hostname"
 #define SER_UUID "uuid"
@@ -245,15 +246,21 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
     QNetworkReply* reply = nam.get(request);
 
     // Sync-over-async with 10 second timeout
+    bool timedOut = false;
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, &QTimer::timeout, [&]() {
+        timedOut = true;
+        reply->abort();
+    });
     QEventLoop loop;
     QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
-    QTimer::singleShot(10000, &loop, &QEventLoop::quit);
+    timer.start(10000);
     loop.exec(QEventLoop::ExcludeUserInputEvents);
 
     bool success = false;
-    if (!reply->isFinished()) {
+    if (timedOut) {
         qWarning() << "HTTP wake request timed out for" << computerName;
-        reply->abort();
     } else if (reply->error() != QNetworkReply::NoError) {
         qWarning() << "HTTP wake request failed for" << computerName << ":" << reply->errorString();
     } else {
@@ -266,7 +273,8 @@ bool NvComputer::performHttpWake(const QString& url, const QString& computerName
         }
     }
 
-    delete reply;
+    reply->deleteLater();
+    QCoreApplication::processEvents();
     return success;
 }
 

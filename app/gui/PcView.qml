@@ -429,6 +429,7 @@ CenteredGridView {
             wolRadio.checked = (wakeMethod === 0)
             httpRadio.checked = (wakeMethod === 1)
             httpWakeUrlField.text = httpWakeUrl
+            standardButton(Dialog.Ok).enabled = urlValid
         }
 
         onClosed: {
@@ -442,7 +443,9 @@ CenteredGridView {
 
         // Disable OK button when HTTP wake is selected but URL is invalid
         onUrlValidChanged: {
-            standardButton(Dialog.Ok).enabled = urlValid
+            if (visible) {
+                standardButton(Dialog.Ok).enabled = urlValid
+            }
         }
 
         ColumnLayout {
@@ -451,6 +454,10 @@ CenteredGridView {
             Label {
                 text: qsTr("Wake Method:")
                 font.bold: true
+            }
+
+            ButtonGroup {
+                id: wakeMethodGroup
             }
 
             RadioButton {
@@ -463,10 +470,6 @@ CenteredGridView {
                 id: httpRadio
                 text: qsTr("HTTP Wake (for VPN/Tailscale)")
                 ButtonGroup.group: wakeMethodGroup
-            }
-
-            ButtonGroup {
-                id: wakeMethodGroup
             }
 
             Label {
