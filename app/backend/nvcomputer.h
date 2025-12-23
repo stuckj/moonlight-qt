@@ -120,7 +120,7 @@ public:
     QVector<NvApp> appList;
     bool isNvidiaServerSoftware;
     WakeMethod wakeMethod;
-    QString httpWakeUrl;  // URL template with {mac}, {localaddress}, {remoteaddress}
+    QString httpWakeUrl;
     // Remember to update isEqualSerialized() when adding fields here!
 
     // Synchronization
